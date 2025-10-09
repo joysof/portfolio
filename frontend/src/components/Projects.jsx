@@ -1,0 +1,102 @@
+import React from "react";
+import { BsGlobe } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa6";
+
+const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Website",
+    desc: "A full-featured MERN e-commerce platform with product management, cart, and admin panel.",
+    tech: ["React", "Node.js", "MongoDB", "Express.js"],
+    link: "https://yourlink.com",
+    github: "https://github.com/yourgithub/ecommerce",
+  },
+  {
+    id: 2,
+    title: "Portfolio Website",
+    desc: "A personal portfolio showcasing skills and projects, built with React and Tailwind CSS.",
+    tech: ["React", "Tailwind", "Vite"],
+    link: "#",
+    github: "https://github.com/joysof/portfolio",
+  },
+  {
+    id: 3,
+    title: "Task Manager App",
+    desc: "A simple task management app with user authentication and real-time updates.",
+    tech: ["React", "Node.js", "MongoDB" ,"Express.js"],
+    link: "https://bd-calling-assessment-frontend.onrender.com",
+    github: "https://github.com/joysof/bd_Calling_assessment",
+  },
+];
+
+const Projects = () => {
+  return (
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-100 
+      dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-center transition-colors duration-500"
+    >
+      <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-teal-500 to-blue-500 text-transparent bg-clip-text">
+        My Projects
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-16">
+        {projects.map((p) => (
+          <div
+            key={p.id}
+            className="bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg border border-gray-200 
+            dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 
+            transition-all duration-500"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
+              {p.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 text-sm  md:text-xl mb-4">{p.desc}</p>
+
+            {/* Tech stack badges */}
+            <div className="flex flex-wrap justify-center gap-2 mb-5">
+              {p.tech.map((t, i) => (
+                <span
+                  key={i}
+                  className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-3 py-1 
+                  rounded-full text-xs md:text-lg font-medium shadow-md"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex gap-4 justify-center items-center mt-6">
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-4 px-10  py-3 bg-gradient-to-r from-teal-500 to-blue-500 
+                text-white rounded-full hover:from-teal-400 hover:to-blue-400 shadow-md hover:shadow-lg 
+                transition-all duration-300"
+              >
+                <BsGlobe className="text-2xl" />
+                <span className="hidden sm:inline">Live</span>
+              </a>
+
+              <a
+                href={p.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex  items-center justify-center gap-4 px-10 py-3 border-2 border-teal-500 
+                text-teal-500 rounded-full hover:bg-teal-500 hover:text-white 
+                transition-all duration-300"
+              >
+                <FaGithub className="text-2xl" />
+                <span className="hidden sm:inline">Code</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

@@ -1,5 +1,6 @@
 import About from "../components/About.jsx";
 import Hero from "../components/Hero.jsx";
+import Projects from "../components/Projects.jsx";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Hero />
       <About/>
+      <Projects/>
     </>
   );
 };
