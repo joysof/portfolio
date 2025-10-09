@@ -33,25 +33,25 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-100 
-      dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-center transition-colors duration-500"
+      className="py-20 mt-20 rounded-3xl shadow-lg  bg-gradient-to-b from-gray-50 to-gray-200 
+      dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 text-center transition-colors duration-500"
     >
       <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-teal-500 to-blue-500 text-transparent bg-clip-text">
         My Projects
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-16">
+      <div className=" md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-8 px-6 md:px-16">
         {projects.map((p) => (
           <div
             key={p.id}
             className="bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg border border-gray-200 
             dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 
-            transition-all duration-500"
+            transition-all duration-500 my-10"
           >
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
               {p.title}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm  md:text-xl mb-4">{p.desc}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm  md:text-[16px] mb-4">{p.desc}</p>
 
             {/* Tech stack badges */}
             <div className="flex flex-wrap justify-center gap-2 mb-5">
@@ -59,24 +59,24 @@ const Projects = () => {
                 <span
                   key={i}
                   className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-3 py-1 
-                  rounded-full text-xs md:text-lg font-medium shadow-md"
+                  rounded-full text-xs md:text-[16px] font-medium shadow-md"
                 >
                   {t}
                 </span>
               ))}
             </div>
 
-            {/* Action Buttons */}
+            
             <div className="flex gap-4 justify-center items-center mt-6">
               <a
                 href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-4 px-10  py-3 bg-gradient-to-r from-teal-500 to-blue-500 
+                className="flex items-center justify-center gap-2 px-3 py-2 sm:px-5 lg:px-8  md:py-3 bg-gradient-to-r from-teal-500 to-blue-500 
                 text-white rounded-full hover:from-teal-400 hover:to-blue-400 shadow-md hover:shadow-lg 
                 transition-all duration-300"
               >
-                <BsGlobe className="text-2xl" />
+                <BsGlobe className="text-xl md:text-2xl" />
                 <span className="hidden sm:inline">Live</span>
               </a>
 
@@ -84,11 +84,11 @@ const Projects = () => {
                 href={p.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex  items-center justify-center gap-4 px-10 py-3 border-2 border-teal-500 
+                className="flex  items-center justify-center px-3 py-2 gap-2 sm:px-5 lg:px-8 sm:py-3 border-2 border-teal-500 
                 text-teal-500 rounded-full hover:bg-teal-500 hover:text-white 
                 transition-all duration-300"
               >
-                <FaGithub className="text-2xl" />
+                <FaGithub className="text-xl md:text-2xl" />
                 <span className="hidden sm:inline">Code</span>
               </a>
             </div>
