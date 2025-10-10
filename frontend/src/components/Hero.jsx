@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="h-screen mt-30 justify-center rounded-4xl flex flex-col md:flex-row md:justify-between items-center text-center md:text-left bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 md:px-20 transition-colors duration-500 overflow-hidden">
+    <section className="h-screen mt-25 md:mt-30 justify-center rounded-4xl flex flex-col md:flex-row md:justify-between items-center text-center md:text-left bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 md:px-20 transition-colors duration-500 overflow-hidden">
       
       {/* Left Side - Profile Image */}
       <div className="mb-8 md:mb-0">

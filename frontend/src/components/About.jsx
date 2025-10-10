@@ -5,14 +5,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mt-20 py-20 flex flex-col-reverse md:flex-row items-center justify-between 
+      className="mt-5 md:mt-10 py-20 flex flex-col-reverse md:flex-row items-center justify-between 
       px-6 md:px-16 bg-gradient-to-b from-gray-50 to-gray-200 
       dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 
       transition-all duration-500 rounded-3xl shadow-lg overflow-hidden"
     >
       {/* ==== LEFT SIDE TEXT ==== */}
       <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
-        <h2 className="text-4xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 text-transparent bg-clip-text uppercase">
+        <h2 className=" text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 text-transparent bg-clip-text uppercase">
           About Me
         </h2>
 
@@ -35,17 +35,17 @@ const About = () => {
           always exploring new technologies to stay ahead of the curve.
         </p>
 
-        <div className="mt-8 flex justify-center md:justify-start gap-4">
+        <div className="mt-8 flex justify-center items-center md:justify-start gap-4">
           <a
             href="#contact"
-            className="px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full 
+            className="px-2 text-sm sm:text-xl sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full 
             hover:from-teal-400 hover:to-blue-400 shadow-md hover:shadow-lg transition-all duration-300"
           >
             Contact Me
           </a>
           <a
             href="#projects"
-            className="px-6 py-3 border-2 border-teal-500 text-teal-500 rounded-full 
+            className=" px-2 py-2 text-sm md:text-xl sm:px-6 sm:py-3 border-2 border-teal-500 text-teal-500 rounded-full 
             hover:bg-teal-500 hover:text-white transition-all duration-300"
           >
             View Projects

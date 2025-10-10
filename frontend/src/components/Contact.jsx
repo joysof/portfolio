@@ -12,10 +12,11 @@ const Contact = () => {
     setTimeout(() => setLoading(false), 2000); // demo loader
   };
 
+
   return (
     <section
       id="contact"
-      className="rounded-3xl shadow-lg mt-20 px-6 py-20
+      className="rounded-3xl shadow-lg mt-5 md:mt-10  px-2 sm:px-6 py-20
       bg-gradient-to-b from-gray-50 to-gray-200 
       dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100 
       text-center transition-all duration-500"
@@ -41,24 +42,43 @@ const Contact = () => {
           </p>
 
           <div className="flex items-center gap-4 mt-4">
-            <a href="" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.facebook.com/mdsajib.sikther" target="_blank" rel="noopener noreferrer"
                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 text-4xl transition-colors">
               <FaFacebook />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/joysof" target="_blank" rel="noopener noreferrer"
                className="text-gray-700 dark:text-gray-300 hover:bg-blue-600 rounded-full hover:text-blue-600 dark:hover:text-white text-4xl transition-colors ">
               <FaGithub />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/md-sajib-hossen-abab46385" target="_blank" rel="noopener noreferrer"
                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 text-4xl transition-colors">
               <FaLinkedin />
             </a>
+          </div>
+
+          <div className="mt-5">
+            <a
+  href="/resume.pdf"
+  download="Sajib_Hossen_Resume.pdf"
+  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full shadow-md hover:scale-105 hover:from-teal-400 hover:to-blue-400 transition-all duration-300"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-5 w-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+  </svg>
+  Download Resume
+</a>
           </div>
         </div>
 
         {/* === Right Side (Form) === */}
         <div className="flex-1 w-full max-w-lg bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg 
-        rounded-2xl shadow-2xl p-8 border border-gray-200 dark:border-gray-700">
+        rounded-2xl shadow-2xl p-2 sm:p-8 border border-gray-200 dark:border-gray-700">
           <form className="space-y-6" onSubmit={sendEmail}>
             <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3">
               <FaUser className="text-teal-500 text-xl" />

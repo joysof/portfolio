@@ -9,7 +9,7 @@ import About from './components/About.jsx'
 const App = () => {
   return (<ThemeProvider>
     <div className='bg-white/5'>
-    <div className='w-[85%] mx-auto'>
+    <div className='sm:w-[85%] mx-auto'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
