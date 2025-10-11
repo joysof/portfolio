@@ -6,11 +6,12 @@ const ProjectContext = createContext()
 export const ProjectProvider = ({ children }) => {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(false)
+    const backendURL = import.meta.env.VITE_BACKEND_URL
 
   const fetchProjects = async () => {
     try {
       setLoading(true)
-      const res = await axios.get('http://localhost:5000/api/projects')
+      const res = await axios.get(`${backendURL}/api/project/getAllProject`)
       setProjects(res.data)
     } catch (err) {
       console.error('Error fetching projects:', err.message)
