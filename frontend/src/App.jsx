@@ -7,7 +7,7 @@ import { ThemeProvider } from './context/ThemContext.jsx'
 import About from './components/About.jsx'
 
 const App = () => {
-  return (<ThemeProvider>
+  return (
     <div className='bg-white/5'>
     <div className='sm:w-[85%] mx-auto'>
       <Navbar/>
@@ -18,7 +18,7 @@ const App = () => {
       
       </div>
       </div>
-      </ThemeProvider>
+      
   )
 }
 
