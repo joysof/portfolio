@@ -1,4 +1,4 @@
-import projectService from '../services/project.services.js'
+import projectService from '../services/project.service.js'
 
 const getProjects = async (req, res) => {
   try {
@@ -11,12 +11,11 @@ const getProjects = async (req, res) => {
 
 const addProject = async (req, res) => {
   try {
-    const { title, description, image, githubLink, liveLink, techStack } =
+    const { title, description, githubLink, liveLink, techStack } =
       req.body
     const newProject = await projectService.createProject({
       title,
       description,
-      image,
       githubLink,
       liveLink,
       techStack,
