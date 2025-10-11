@@ -55,7 +55,8 @@ const Projects = () => {
             <h3 className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
               {project.title}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm  md:text-[16px] mb-4">{project.desc}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm  md:text-[16px] mb-4">{project.
+description}</p>
 
             {/* Tech stack badges */}
             <div className="flex flex-wrap justify-center gap-2 mb-5">
@@ -73,7 +74,8 @@ const Projects = () => {
             
             <div className="flex gap-4 justify-center items-center mt-6">
               <a
-                href={project.link}
+                href={project.
+liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center cursor-pointer justify-center gap-2 px-3 py-2 sm:px-5 lg:px-8  md:py-3 bg-gradient-to-r from-teal-500 to-blue-500 
@@ -85,7 +87,8 @@ const Projects = () => {
               </a>
 
               <a
-                href={project.github}
+                href={project.
+githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex cursor-pointer  items-center justify-center px-3 py-2 gap-2 sm:px-5 lg:px-8 sm:py-3 border-2 border-teal-500 
