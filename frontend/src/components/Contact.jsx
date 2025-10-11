@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPaperPlane, FaPhoneAlt, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutgoingMail } from "react-icons/md";
-
+import { useContact } from "../context/contact.context.jsx";
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const { sendMessage, sending } = useContact();
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+   const handleSubmit = async (e) => {
     e.preventDefault();
-    // EmailJS code can be added here later
-    setLoading(true);
-    setTimeout(() => setLoading(false), 2000); // demo loader
+    await sendMessage(form);
+    setForm({ name: "", email: "", message: "" });
   };
 
 
@@ -79,12 +84,13 @@ const Contact = () => {
         {/* === Right Side (Form) === */}
         <div className="flex-1 w-full max-w-lg bg-white/70 dark:bg-gray-800/50 backdrop-blur-lg 
         rounded-2xl shadow-2xl p-2 sm:p-8 border border-gray-200 dark:border-gray-700">
-          <form className="space-y-6" onSubmit={sendEmail}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3">
               <FaUser className="text-teal-500 text-xl" />
               <input
                 type="text"
-                name="from_name"
+                name="name" value={form.name}
+                onChange={handleChange}
                 placeholder="Your Name"
                 required
                 className="w-full bg-transparent outline-none text-gray-800 dark:text-gray-100"
@@ -95,7 +101,10 @@ const Contact = () => {
               <FaEnvelope className="text-teal-500 text-xl" />
               <input
                 type="email"
-                name="reply_to"
+                
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="Your Email"
                 required
                 className="w-full bg-transparent outline-none text-gray-800 dark:text-gray-100"
@@ -105,6 +114,8 @@ const Contact = () => {
             <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3">
               <textarea
                 name="message"
+                onChange={handleChange}
+                value={form.message}
                 placeholder="Your Message"
                 rows="4"
                 required
@@ -114,14 +125,14 @@ const Contact = () => {
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={sending}
               className={`w-full flex items-center justify-center gap-3 py-3 text-lg font-medium 
               bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full shadow-md 
               hover:from-teal-400 hover:to-blue-400 hover:scale-105 transition-all duration-300 
-              ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+              `}
             >
               <FaPaperPlane className="text-xl" />
-              {loading ? "Sending..." : "Send Message"}
+                {sending ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

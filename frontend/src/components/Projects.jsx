@@ -33,8 +33,7 @@ import { useProjects } from "../context/Project.context.jsx";
 
 const Projects = () => {
   const { projects, loading } = useProjects();
-  console.log("teechStack" ,projects.techStack)
-   if (loading) return <p>Loading projects...</p>;
+  if (loading) return <p>Loading projects...</p>;
   return (
     <section
       id="projects"
@@ -77,7 +76,7 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-3 py-2 sm:px-5 lg:px-8  md:py-3 bg-gradient-to-r from-teal-500 to-blue-500 
+                className="flex items-center cursor-pointer justify-center gap-2 px-3 py-2 sm:px-5 lg:px-8  md:py-3 bg-gradient-to-r from-teal-500 to-blue-500 
                 text-white rounded-full hover:from-teal-400 hover:to-blue-400 shadow-md hover:shadow-lg 
                 transition-all duration-300"
               >
@@ -89,7 +88,7 @@ const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex  items-center justify-center px-3 py-2 gap-2 sm:px-5 lg:px-8 sm:py-3 border-2 border-teal-500 
+                className="flex cursor-pointer  items-center justify-center px-3 py-2 gap-2 sm:px-5 lg:px-8 sm:py-3 border-2 border-teal-500 
                 text-teal-500 rounded-full hover:bg-teal-500 hover:text-white 
                 transition-all duration-300"
               >
