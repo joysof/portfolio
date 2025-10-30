@@ -63,7 +63,7 @@ const Contact = () => {
 
           <div className="mt-5">
             <a
-  href="/resume.pdf"
+  href="Md_Sajib_Hossen_Resume.pdf"
   download="Sajib_Hossen_Resume.pdf"
   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-full shadow-md hover:scale-105 hover:from-teal-400 hover:to-blue-400 transition-all duration-300"
 >
