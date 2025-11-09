@@ -1,39 +1,39 @@
 import React from "react";
 import { BsGlobe } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
-import { useProjects } from "../context/Project.context.jsx";
-// const projects = [
-//   {
-//     id: 1,
-//     title: "E-Commerce Website",
-//     desc: "A full-featured MERN e-commerce platform with product management, cart, and admin panel.",
-//     tech: ["React", "Node.js", "MongoDB", "Express.js"],
-//     link: "https://yourlink.com",
-//     github: "https://github.com/yourgithub/ecommerce",
-//   },
-//   {
-//     id: 2,
-//     title: "Portfolio Website",
-//     desc: "A personal portfolio showcasing skills and projects, built with React and Tailwind CSS.",
-//     tech: ["React", "Tailwind", "Vite"],
-//     link: "#",
-//     github: "https://github.com/joysof/portfolio",
-//   },
-//   {
-//     id: 3,
-//     title: "Task Manager App",
-//     desc: "A simple task management app with user authentication and real-time updates.",
-//     tech: ["React", "Node.js", "MongoDB" ,"Express.js"],
-//     link: "https://bd-calling-assessment-frontend.onrender.com",
-//     github: "https://github.com/joysof/bd_Calling_assessment",
-//   },
-// ];
+// import { useProjects } from "../context/Project.context.jsx";
+const projects = [
+  {
+    _id: 1,
+    title: "TaskFlow — A Smart To-Do Application",
+    description: "A simple and intuitive task management app where users can registration, login , verifyEmail ,and add, edit, delete daily tasks. It helps users stay productive and organized with a clean UI and real-time updates.",
+    techStack: ["React","tailwindcss", "Node.js", "MongoDB", "Express.js"],
+    liveLink: "https://todo-appsa.netlify.app/",
+    githubLink: "https://github.com/joysof/bd_Calling_assessment",
+  },
+  {
+    id: 2,
+    title: "ShopEase — Modern E-Commerce Platform",
+    description: "A full-featured e-commerce web app that allows users to browse products, add them to cart, and place orders securely. Includes admin dashboard, product management, and payment integration.",
+    techStack: ["React", "Tailwindcss","Node.js" ,"Express.js","mongoDB" ,"Stripe"],
+    liveLink: "https://e-commercesajib.netlify.app/",
+    githubLink: "https://github.com/joysof/e-_commerce",
+  },
+  {
+    id: 3,
+    title: "SajibDev — Personal Portfolio Website",
+    description: "A responsive portfolio website showcasing my skills, projects, and contact details. Features a dark/light theme, contact form",
+    techStack: ["React", "tailwindcss" ,"Node.js", "MongoDB" ,"Express.js"],
+    liveLink: "https://sajibhossen.netlify.app/",
+    githubLink: "https://github.com/joysof/portfolio",
+  },
+];
 
 
 
 const Projects = () => {
-  const { projects, loading } = useProjects();
-  if (loading) return <p>Loading projects...</p>;
+  // const { projects, loading } = useProjects();
+  // if (loading) return <p>Loading projects...</p>;
   return (
     <section
       id="projects"
